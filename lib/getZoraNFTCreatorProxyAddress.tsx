@@ -11,7 +11,7 @@ const getZoraNFTCreatorProxyAddress = (chainId) => {
   if (chainId === 1) {
     return ETH_MAINNET
   }
-  if (chainId === 777777) {
+  if (chainId === 7777777) {
     return ZORA_MAINNET
   }
   if (chainId === 10) {
