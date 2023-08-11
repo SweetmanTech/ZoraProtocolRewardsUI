@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint --max-warnings 0",
     "lint:fix": "next lint --fix",
-    "prettier:fix": "npx prettier --write components lib pages utils providers hooks",
+    "prettier:fix": "npx prettier --write components lib pages hooks",
     "format": "yarn run prettier:fix && yarn run lint:fix"
   },
   "dependencies": {
