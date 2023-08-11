@@ -13,10 +13,7 @@ const useZoraDeploy = () => {
   const createEditionWithReferral = async () => {
     try {
       const zoraNFTCreatorProxyAddres = getZoraNFTCreatorProxyAddress(chain?.id)
-      console.log("create contract", zoraNFTCreatorProxyAddres)
       const contract = new Contract(zoraNFTCreatorProxyAddres, abi, signer)
-      const contractName = await contract.contractName()
-      console.log("call createEditionWithReferral", contractName)
       const name = ""
       const symbol = ""
       const editionSize = 10_000
