@@ -8,8 +8,8 @@ const useZoraDeploy = () => {
   const signer = useEthersSigner()
   const { chain } = useNetwork()
 
-  const zoraNFTCreatorProxyAddres = getZoraNFTCreatorProxyAddress(chain.id)
   const createEditionWithReferral = async () => {
+    const zoraNFTCreatorProxyAddres = getZoraNFTCreatorProxyAddress(chain?.id)
     console.log("create contract", zoraNFTCreatorProxyAddres)
     const contract = new Contract(zoraNFTCreatorProxyAddres, abi, signer)
     const name = await contract.contractName()
