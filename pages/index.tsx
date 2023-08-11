@@ -1,6 +1,6 @@
 import type { NextPage } from "next"
-import EnterPage from "../components/Enter"
+import HomePage from "../components/HomePage/HomePage"
 
-const Enter: NextPage = () => <EnterPage />
+const LandingPage: NextPage = () => <HomePage />
 
-export default Enter
+export default LandingPage
