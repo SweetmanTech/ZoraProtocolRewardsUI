@@ -16,13 +16,13 @@ const useZoraDeploy = () => {
       const contract = new Contract(zoraNFTCreatorProxyAddres, abi, signer)
       const name = ""
       const symbol = ""
-      const editionSize = 10_000
+      const editionSize = "18446744073709551615"
       const royaltyBps = 500
       const fundsRecipient = address
       const defaultAdmin = address
       const salesConfig = {
         publicSalePrice: 0,
-        maxSalePurchasePerAddress: 100,
+        maxSalePurchasePerAddress: "4294967295",
         publicSaleStart: 0,
         publicSaleEnd: "18446744073709551615",
         presaleStart: 0,
@@ -30,9 +30,9 @@ const useZoraDeploy = () => {
         presaleMerkleRoot: "0x0000000000000000000000000000000000000000000000000000000000000000",
       }
       const description = ""
-      const animationUri = ""
-      const imageUri = ""
-      const createReferral = address
+      const animationUri = "ipfs://"
+      const imageUri = "ipfs://"
+      const createReferral = process.env.NEXT_PUBLIC_CREATE_REFERRAL
       const tx = await contract.createEditionWithReferral(
         name,
         symbol,
