@@ -21,8 +21,20 @@ import * as React from "react"
 import { Analytics } from "@vercel/analytics/react"
 import { alchemyProvider } from "wagmi/providers/alchemy"
 import { publicProvider } from "wagmi/providers/public"
+import { publicGoodsNetwork, publicGoodsNetworkSepolia } from "../lib/chains/publicGoodsNetwork"
 
-const myChains = [mainnet, zora, optimism, base, goerli, zoraTestnet, optimismGoerli, baseGoerli]
+const myChains = [
+  mainnet,
+  zora,
+  optimism,
+  base,
+  publicGoodsNetwork,
+  goerli,
+  zoraTestnet,
+  optimismGoerli,
+  baseGoerli,
+  publicGoodsNetworkSepolia,
+]
 const { chains, publicClient, webSocketPublicClient } = configureChains(myChains, [
   alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY }),
   publicProvider(),
